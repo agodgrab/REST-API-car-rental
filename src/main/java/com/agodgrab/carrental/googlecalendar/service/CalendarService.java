@@ -1,8 +1,8 @@
-package com.kodilla.kodilla.diplomaBackend.googlecalendar.service;
+package com.agodgrab.carrental.googlecalendar.service;
 
 import com.google.api.services.calendar.model.Event;
-import com.kodilla.kodilla.diplomaBackend.domain.Rent;
-import com.kodilla.kodilla.diplomaBackend.googlecalendar.client.CalendarClient;
+import com.agodgrab.carrental.domain.Rent;
+import com.agodgrab.carrental.googlecalendar.client.CalendarClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

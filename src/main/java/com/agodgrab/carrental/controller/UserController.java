@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.controller;
+package com.agodgrab.carrental.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;

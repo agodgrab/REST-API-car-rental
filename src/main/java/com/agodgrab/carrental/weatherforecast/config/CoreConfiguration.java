@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.weatherforecast.config;
+package com.agodgrab.carrental.weatherforecast.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,10 +1,10 @@
-package com.kodilla.kodilla.diplomaBackend.service;
+package com.agodgrab.carrental.service;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Penalty;
-import com.kodilla.kodilla.diplomaBackend.domain.Rent;
-import com.kodilla.kodilla.diplomaBackend.domain.User;
-import com.kodilla.kodilla.diplomaBackend.domain.enums.RentStatus;
-import com.kodilla.kodilla.diplomaBackend.repository.RentRepository;
+import com.agodgrab.carrental.domain.Penalty;
+import com.agodgrab.carrental.domain.Rent;
+import com.agodgrab.carrental.domain.enums.RentStatus;
+import com.agodgrab.carrental.repository.RentRepository;
+import com.agodgrab.carrental.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

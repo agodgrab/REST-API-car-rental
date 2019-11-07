@@ -1,8 +1,8 @@
-package com.kodilla.kodilla.diplomaBackend.mapper;
+package com.agodgrab.carrental.mapper;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Penalty;
-import com.kodilla.kodilla.diplomaBackend.dto.PenaltyDto;
-import com.kodilla.kodilla.diplomaBackend.service.RentService;
+import com.agodgrab.carrental.domain.Penalty;
+import com.agodgrab.carrental.dto.PenaltyDto;
+import com.agodgrab.carrental.service.RentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

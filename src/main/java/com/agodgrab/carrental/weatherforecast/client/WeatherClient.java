@@ -1,8 +1,8 @@
-package com.kodilla.kodilla.diplomaBackend.weatherforecast.client;
+package com.agodgrab.carrental.weatherforecast.client;
 
-import com.kodilla.kodilla.diplomaBackend.weatherforecast.config.WeatherConfig;
-import com.kodilla.kodilla.diplomaBackend.weatherforecast.domain.CurrentWeatherDto;
-import com.kodilla.kodilla.diplomaBackend.weatherforecast.domain.WeatherForecastDto;
+import com.agodgrab.carrental.weatherforecast.config.WeatherConfig;
+import com.agodgrab.carrental.weatherforecast.domain.CurrentWeatherDto;
+import com.agodgrab.carrental.weatherforecast.domain.WeatherForecastDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

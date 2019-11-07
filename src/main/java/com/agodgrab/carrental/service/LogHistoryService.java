@@ -1,8 +1,8 @@
-package com.kodilla.kodilla.diplomaBackend.service;
+package com.agodgrab.carrental.service;
 
-import com.kodilla.kodilla.diplomaBackend.domain.LogHistory;
-import com.kodilla.kodilla.diplomaBackend.domain.User;
-import com.kodilla.kodilla.diplomaBackend.repository.LogHistoryRepository;
+import com.agodgrab.carrental.repository.LogHistoryRepository;
+import com.agodgrab.carrental.domain.LogHistory;
+import com.agodgrab.carrental.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

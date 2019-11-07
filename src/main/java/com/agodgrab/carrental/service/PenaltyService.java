@@ -1,7 +1,7 @@
-package com.kodilla.kodilla.diplomaBackend.service;
+package com.agodgrab.carrental.service;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Penalty;
-import com.kodilla.kodilla.diplomaBackend.repository.PenaltyRepository;
+import com.agodgrab.carrental.repository.PenaltyRepository;
+import com.agodgrab.carrental.domain.Penalty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

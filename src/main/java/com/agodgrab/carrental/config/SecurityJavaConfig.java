@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.config;
+package com.agodgrab.carrental.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

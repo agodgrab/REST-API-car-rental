@@ -1,9 +1,9 @@
-package com.kodilla.kodilla.diplomaBackend.controller;
+package com.agodgrab.carrental.controller;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Category;
-import com.kodilla.kodilla.diplomaBackend.dto.CategoryDto;
-import com.kodilla.kodilla.diplomaBackend.mapper.CategoryMapper;
-import com.kodilla.kodilla.diplomaBackend.service.CategoryService;
+import com.agodgrab.carrental.domain.Category;
+import com.agodgrab.carrental.dto.CategoryDto;
+import com.agodgrab.carrental.mapper.CategoryMapper;
+import com.agodgrab.carrental.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

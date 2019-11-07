@@ -1,7 +1,7 @@
-package com.kodilla.kodilla.diplomaBackend.scheduler;
+package com.agodgrab.carrental.scheduler;
 
-import com.kodilla.kodilla.diplomaBackend.repository.RentRepository;
-import com.kodilla.kodilla.diplomaBackend.service.RentService;
+import com.agodgrab.carrental.repository.RentRepository;
+import com.agodgrab.carrental.service.RentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

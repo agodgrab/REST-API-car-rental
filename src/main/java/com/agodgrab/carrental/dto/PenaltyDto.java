@@ -1,6 +1,6 @@
-package com.kodilla.kodilla.diplomaBackend.dto;
+package com.agodgrab.carrental.dto;
 
-import com.kodilla.kodilla.diplomaBackend.domain.enums.PenaltyReason;
+import com.agodgrab.carrental.domain.enums.PenaltyReason;
 
 import java.math.BigDecimal;
 

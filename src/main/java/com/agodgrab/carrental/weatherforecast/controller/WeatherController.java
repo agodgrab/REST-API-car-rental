@@ -1,8 +1,8 @@
-package com.kodilla.kodilla.diplomaBackend.weatherforecast.controller;
+package com.agodgrab.carrental.weatherforecast.controller;
 
-import com.kodilla.kodilla.diplomaBackend.weatherforecast.domain.CurrentWeatherDto;
-import com.kodilla.kodilla.diplomaBackend.weatherforecast.domain.WeatherForecastDto;
-import com.kodilla.kodilla.diplomaBackend.weatherforecast.service.WeatherService;
+import com.agodgrab.carrental.weatherforecast.service.WeatherService;
+import com.agodgrab.carrental.weatherforecast.domain.CurrentWeatherDto;
+import com.agodgrab.carrental.weatherforecast.domain.WeatherForecastDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

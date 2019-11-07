@@ -1,7 +1,7 @@
-package com.kodilla.kodilla.diplomaBackend.googlecalendar.mapper;
+package com.agodgrab.carrental.googlecalendar.mapper;
 
+import com.agodgrab.carrental.googlecalendar.domain.EventDto;
 import com.google.api.services.calendar.model.Event;
-import com.kodilla.kodilla.diplomaBackend.googlecalendar.domain.EventDto;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

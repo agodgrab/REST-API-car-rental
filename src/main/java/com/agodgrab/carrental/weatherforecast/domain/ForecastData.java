@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.weatherforecast.domain;
+package com.agodgrab.carrental.weatherforecast.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.dto;
+package com.agodgrab.carrental.dto;
 
 import java.math.BigDecimal;
 import java.util.List;

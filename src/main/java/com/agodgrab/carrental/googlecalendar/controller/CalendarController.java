@@ -1,11 +1,11 @@
-package com.kodilla.kodilla.diplomaBackend.googlecalendar.controller;
+package com.agodgrab.carrental.googlecalendar.controller;
 
 
-import com.kodilla.kodilla.diplomaBackend.dto.RentDto;
-import com.kodilla.kodilla.diplomaBackend.googlecalendar.domain.EventDto;
-import com.kodilla.kodilla.diplomaBackend.googlecalendar.mapper.EventMapper;
-import com.kodilla.kodilla.diplomaBackend.googlecalendar.service.CalendarService;
-import com.kodilla.kodilla.diplomaBackend.mapper.RentMapper;
+import com.agodgrab.carrental.googlecalendar.domain.EventDto;
+import com.agodgrab.carrental.googlecalendar.mapper.EventMapper;
+import com.agodgrab.carrental.googlecalendar.service.CalendarService;
+import com.agodgrab.carrental.mapper.RentMapper;
+import com.agodgrab.carrental.dto.RentDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

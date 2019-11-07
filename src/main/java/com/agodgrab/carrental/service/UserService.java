@@ -1,7 +1,7 @@
-package com.kodilla.kodilla.diplomaBackend.service;
+package com.agodgrab.carrental.service;
 
-import com.kodilla.kodilla.diplomaBackend.domain.User;
-import com.kodilla.kodilla.diplomaBackend.repository.UserRepository;
+import com.agodgrab.carrental.repository.UserRepository;
+import com.agodgrab.carrental.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.domain.enums;
+package com.agodgrab.carrental.domain.enums;
 
 public enum PenaltyReason {
 

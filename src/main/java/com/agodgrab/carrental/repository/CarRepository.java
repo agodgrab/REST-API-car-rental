@@ -1,6 +1,6 @@
-package com.kodilla.kodilla.diplomaBackend.repository;
+package com.agodgrab.carrental.repository;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Car;
+import com.agodgrab.carrental.domain.Car;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

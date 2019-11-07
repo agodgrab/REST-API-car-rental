@@ -1,6 +1,6 @@
-package com.kodilla.kodilla.diplomaBackend.domain;
+package com.agodgrab.carrental.domain;
 
-import com.kodilla.kodilla.diplomaBackend.domain.enums.UserRole;
+import com.agodgrab.carrental.domain.enums.UserRole;
 
 import javax.persistence.*;
 import java.util.ArrayList;

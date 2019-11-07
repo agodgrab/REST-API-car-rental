@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.service;
+package com.agodgrab.carrental.service;
 
 public class WrongCredentialsException extends Exception {
 

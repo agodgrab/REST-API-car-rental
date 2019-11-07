@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend;
+package com.agodgrab.carrental;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

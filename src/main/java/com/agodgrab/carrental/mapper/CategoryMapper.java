@@ -1,7 +1,7 @@
-package com.kodilla.kodilla.diplomaBackend.mapper;
+package com.agodgrab.carrental.mapper;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Category;
-import com.kodilla.kodilla.diplomaBackend.dto.CategoryDto;
+import com.agodgrab.carrental.domain.Category;
+import com.agodgrab.carrental.dto.CategoryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

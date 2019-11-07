@@ -1,7 +1,7 @@
-package com.kodilla.kodilla.diplomaBackend.dto;
+package com.agodgrab.carrental.dto;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Penalty;
-import com.kodilla.kodilla.diplomaBackend.domain.enums.RentStatus;
+import com.agodgrab.carrental.domain.Penalty;
+import com.agodgrab.carrental.domain.enums.RentStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

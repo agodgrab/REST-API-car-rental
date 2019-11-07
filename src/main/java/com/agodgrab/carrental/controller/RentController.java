@@ -1,10 +1,10 @@
-package com.kodilla.kodilla.diplomaBackend.controller;
+package com.agodgrab.carrental.controller;
 
-import com.kodilla.kodilla.diplomaBackend.dto.RentDto;
-import com.kodilla.kodilla.diplomaBackend.dto.UserDto;
-import com.kodilla.kodilla.diplomaBackend.mapper.RentMapper;
-import com.kodilla.kodilla.diplomaBackend.mapper.UserMapper;
-import com.kodilla.kodilla.diplomaBackend.service.RentService;
+import com.agodgrab.carrental.mapper.RentMapper;
+import com.agodgrab.carrental.mapper.UserMapper;
+import com.agodgrab.carrental.dto.RentDto;
+import com.agodgrab.carrental.dto.UserDto;
+import com.agodgrab.carrental.service.RentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

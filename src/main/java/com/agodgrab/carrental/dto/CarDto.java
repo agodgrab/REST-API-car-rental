@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.dto;
+package com.agodgrab.carrental.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

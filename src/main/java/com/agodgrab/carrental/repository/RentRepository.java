@@ -1,6 +1,6 @@
-package com.kodilla.kodilla.diplomaBackend.repository;
+package com.agodgrab.carrental.repository;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Rent;
+import com.agodgrab.carrental.domain.Rent;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,8 +1,8 @@
-package com.kodilla.kodilla.diplomaBackend.controller;
+package com.agodgrab.carrental.controller;
 
-import com.kodilla.kodilla.diplomaBackend.dto.CarDto;
-import com.kodilla.kodilla.diplomaBackend.mapper.CarMapper;
-import com.kodilla.kodilla.diplomaBackend.service.CarService;
+import com.agodgrab.carrental.mapper.CarMapper;
+import com.agodgrab.carrental.dto.CarDto;
+import com.agodgrab.carrental.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.diplomaBackend.googlecalendar.domain;
+package com.agodgrab.carrental.googlecalendar.domain;
 
 import java.time.LocalDate;
 

@@ -1,7 +1,7 @@
-package com.kodilla.kodilla.diplomaBackend.mapper;
+package com.agodgrab.carrental.mapper;
 
-import com.kodilla.kodilla.diplomaBackend.domain.User;
-import com.kodilla.kodilla.diplomaBackend.dto.UserDto;
+import com.agodgrab.carrental.domain.User;
+import com.agodgrab.carrental.dto.UserDto;
 import org.springframework.stereotype.Component;
 
 @Component

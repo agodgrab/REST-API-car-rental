@@ -1,8 +1,8 @@
-package com.kodilla.kodilla.diplomaBackend.mapper;
+package com.agodgrab.carrental.mapper;
 
-import com.kodilla.kodilla.diplomaBackend.domain.Car;
-import com.kodilla.kodilla.diplomaBackend.dto.CarDto;
-import com.kodilla.kodilla.diplomaBackend.service.CategoryService;
+import com.agodgrab.carrental.domain.Car;
+import com.agodgrab.carrental.dto.CarDto;
+import com.agodgrab.carrental.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
