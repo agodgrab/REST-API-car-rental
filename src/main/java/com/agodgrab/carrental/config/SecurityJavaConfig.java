@@ -1,6 +1,5 @@
 package com.agodgrab.carrental.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -20,15 +19,11 @@ public class SecurityJavaConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
         auth.inMemoryAuthentication()
-                .withUser("admin").password(encoder().encode("adminPass")).roles(ADMIN_ROLE, USER_ROLE)
+                .withUser("admin").password(encoder.encode("adminPass")).roles(ADMIN_ROLE, USER_ROLE)
                 .and()
-                .withUser("user").password(encoder().encode("userPass")).roles(USER_ROLE);
-    }
-
-    @Bean
-    public PasswordEncoder encoder() {
-        return new BCryptPasswordEncoder();
+                .withUser("user").password(encoder.encode("userPass")).roles(USER_ROLE);
     }
 
     @Override
@@ -44,10 +39,12 @@ public class SecurityJavaConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/v1/categories").hasRole(USER_ROLE)
                 .antMatchers("/v1/weather/**").hasRole(USER_ROLE)
                 .antMatchers("/v1/**").hasRole(ADMIN_ROLE)
-                .anyRequest().authenticated()
-                //.antMatchers("/v1/user/login").permitAll() ---> TO BE DONE IN THE FUTURE
+                .anyRequest()
+                .authenticated()
                 .and()
-                .csrf().disable()
-                .formLogin().disable();
+                .csrf()
+                .disable()
+                .formLogin()
+                .disable();
     }
 }
