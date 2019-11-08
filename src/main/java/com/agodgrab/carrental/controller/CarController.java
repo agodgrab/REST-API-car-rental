@@ -1,7 +1,7 @@
 package com.agodgrab.carrental.controller;
 
-import com.agodgrab.carrental.mapper.CarMapper;
 import com.agodgrab.carrental.dto.CarDto;
+import com.agodgrab.carrental.mapper.CarMapper;
 import com.agodgrab.carrental.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,12 +29,12 @@ public class CarController {
                                    @RequestParam(name = "end")
                                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate,
                                    @RequestParam(name = "category") String category) {
-        return carMapper.mapToCarDtoList(carService.searchCar(startDate, endDate, category));
+        return carMapper.mapToDtoList(carService.searchCar(startDate, endDate, category));
     }
 
     @PostMapping(value = "/car", consumes = APPLICATION_JSON_VALUE)
     public void addNewCar(@RequestBody CarDto carDto) {
-        carService.addCar(carMapper.mapToCar(carDto));
+        carService.addCar(carMapper.mapToEntity(carDto));
     }
 
     @DeleteMapping(value = "/car")
@@ -44,7 +44,7 @@ public class CarController {
 
     @PutMapping(value = "/car", consumes = APPLICATION_JSON_VALUE)
     public CarDto updateCarData(@RequestBody CarDto carDto) {
-        return carMapper.mapToCarDto(carService.updateCar(carMapper.mapToCar(carDto)));
+        return carMapper.mapToDto(carService.updateCar(carMapper.mapToEntity(carDto)));
     }
 
 

@@ -1,9 +1,9 @@
 package com.agodgrab.carrental.controller;
 
-import com.agodgrab.carrental.mapper.RentMapper;
-import com.agodgrab.carrental.mapper.UserMapper;
 import com.agodgrab.carrental.dto.RentDto;
 import com.agodgrab.carrental.dto.UserDto;
+import com.agodgrab.carrental.mapper.RentMapper;
+import com.agodgrab.carrental.mapper.UserMapper;
 import com.agodgrab.carrental.service.RentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,31 +28,31 @@ public class RentController {
 
     @PostMapping(value = "book", consumes = APPLICATION_JSON_VALUE)
     public void booking(@RequestBody RentDto rentDto) {
-        rentService.makeReservation(rentMapper.mapToRent(rentDto));
+        rentService.makeReservation(rentMapper.mapToEntity(rentDto));
 
     }
 
     @PutMapping(value = "cancel", consumes = APPLICATION_JSON_VALUE)
     public void cancellingBook(@RequestBody RentDto rentDto) {
-        rentService.cancelReservation(rentMapper.mapToRent(rentDto));
+        rentService.cancelReservation(rentMapper.mapToEntity(rentDto));
 
     }
 
     @PutMapping(value = "confirm", consumes = APPLICATION_JSON_VALUE)
     public void rent(@RequestBody RentDto rentDto) {
-        rentService.confirmRent(rentMapper.mapToRent(rentDto));
+        rentService.confirmRent(rentMapper.mapToEntity(rentDto));
 
     }
 
     @PutMapping(value = "return", consumes = APPLICATION_JSON_VALUE)
     public void returnCar(@RequestBody RentDto rentDto) {
-        rentService.confirmReturn(rentMapper.mapToRent(rentDto));
+        rentService.confirmReturn(rentMapper.mapToEntity(rentDto));
 
     }
 
     @GetMapping(value = "history", consumes = APPLICATION_JSON_VALUE)
     public List<RentDto> getRents(@RequestBody UserDto userDto) {
-        return rentMapper.mapToRentDtoList(rentService.fetchUserRents(userMapper.mapToUser(userDto)));
+        return rentMapper.mapToDtoList(rentService.fetchUserRents(userMapper.mapToEntity(userDto)));
     }
 
 }

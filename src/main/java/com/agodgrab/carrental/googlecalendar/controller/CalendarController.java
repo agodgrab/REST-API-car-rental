@@ -1,11 +1,11 @@
 package com.agodgrab.carrental.googlecalendar.controller;
 
 
+import com.agodgrab.carrental.dto.RentDto;
 import com.agodgrab.carrental.googlecalendar.domain.EventDto;
 import com.agodgrab.carrental.googlecalendar.mapper.EventMapper;
 import com.agodgrab.carrental.googlecalendar.service.CalendarService;
 import com.agodgrab.carrental.mapper.RentMapper;
-import com.agodgrab.carrental.dto.RentDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +27,7 @@ public class CalendarController {
 
     @PostMapping(value = "/event")
     public String createCalendarEvent(@RequestBody RentDto rentDto) {
-        return calendarService.addEvent(rentMapper.mapToRent(rentDto));
+        return calendarService.addEvent(rentMapper.mapToEntity(rentDto));
     }
 
     @GetMapping(value = "/upcomingEvents")

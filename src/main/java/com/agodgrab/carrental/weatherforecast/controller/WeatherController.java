@@ -1,8 +1,8 @@
 package com.agodgrab.carrental.weatherforecast.controller;
 
-import com.agodgrab.carrental.weatherforecast.service.WeatherService;
 import com.agodgrab.carrental.weatherforecast.domain.CurrentWeatherDto;
 import com.agodgrab.carrental.weatherforecast.domain.WeatherForecastDto;
+import com.agodgrab.carrental.weatherforecast.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

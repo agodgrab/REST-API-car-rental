@@ -2,9 +2,9 @@ package com.agodgrab.carrental.service;
 
 import com.agodgrab.carrental.domain.Penalty;
 import com.agodgrab.carrental.domain.Rent;
+import com.agodgrab.carrental.domain.User;
 import com.agodgrab.carrental.domain.enums.RentStatus;
 import com.agodgrab.carrental.repository.RentRepository;
-import com.agodgrab.carrental.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

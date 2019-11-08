@@ -1,17 +1,14 @@
 package com.agodgrab.carrental.mapper;
 
-import com.agodgrab.carrental.service.UserService;
 import com.agodgrab.carrental.domain.Rent;
 import com.agodgrab.carrental.dto.RentDto;
 import com.agodgrab.carrental.service.CarService;
+import com.agodgrab.carrental.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @Component
-public class RentMapper {
+public class RentMapper implements Mapper<RentDto, Rent>{
 
     @Autowired
     UserService userService;
@@ -19,21 +16,11 @@ public class RentMapper {
     @Autowired
     CarService carService;
 
-    public Rent mapToRent(RentDto rentDto) {
-        return new Rent(rentDto.getId(),
-                userService.findUser(rentDto.getUserId()),
-                carService.findCar(rentDto.getCarRentedId()),
-                rentDto.getStartDay(),
-                rentDto.getEndDay(),
-                rentDto.getFuelLevel(),
-                rentDto.isWithInsurance(),
-                rentDto.isWithExtraCarTrunk(),
-                rentDto.getListOfPenalties(),
-                rentDto.getToBePaid(),
-                rentDto.getStatus());
-    }
+    @Autowired
+    PenaltyMapper penaltyMapper;
 
-    public RentDto mapToRentDto(Rent rent) {
+    @Override
+    public RentDto mapToDto(Rent rent) {
         return new RentDto.RentDtoBuilder()
                 .id(rent.getId())
                 .userId(rent.getUser().getId())
@@ -43,21 +30,27 @@ public class RentMapper {
                 .fuelLevel(rent.getFuelLevel())
                 .withInsurance(rent.isWithInsurance())
                 .withExtraCarTrunk(rent.isWithExtraCarTrunk())
-                .penalties(rent.getListOfPenalties())
+                .penalties(penaltyMapper.mapToDtoList(rent.getListOfPenalties()))
                 .toBePaid(rent.getToBePaid())
                 .status(rent.getStatus())
                 .build();
     }
 
-    public List<RentDto> mapToRentDtoList(final List<Rent> rentsList) {
-        return rentsList.stream()
-                .map(rent -> mapToRentDto(rent))
-                .collect(Collectors.toList());
+    @Override
+    public Rent mapToEntity(RentDto rentDto) {
+
+        return new Rent(rentDto.getId(),
+                userService.findUser(rentDto.getUserId()),
+                carService.findCar(rentDto.getCarRentedId()),
+                rentDto.getStartDay(),
+                rentDto.getEndDay(),
+                rentDto.getFuelLevel(),
+                rentDto.isWithInsurance(),
+                rentDto.isWithExtraCarTrunk(),
+                penaltyMapper.mapToEntitiesList(rentDto.getListOfPenalties()),
+                rentDto.getToBePaid(),
+                rentDto.getStatus());
+
     }
 
-    public List<Rent> mapToRentList(final List<RentDto> rentsDtoList) {
-        return rentsDtoList.stream()
-                .map(rentDto -> mapToRent(rentDto))
-                .collect(Collectors.toList());
-    }
 }

@@ -1,7 +1,7 @@
 package com.agodgrab.carrental.service;
 
-import com.agodgrab.carrental.repository.UserRepository;
 import com.agodgrab.carrental.domain.User;
+import com.agodgrab.carrental.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

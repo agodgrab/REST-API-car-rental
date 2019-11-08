@@ -1,5 +1,6 @@
 package com.agodgrab.carrental.scheduler;
 
+import com.agodgrab.carrental.domain.enums.RentStatus;
 import com.agodgrab.carrental.repository.RentRepository;
 import com.agodgrab.carrental.service.RentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ReceivableScheduler {
     @Scheduled(cron = "0 0 6 * * *")
     public void accountReceivables() {
         rentRepository.findAll().stream()
-                .filter(rent -> ("BOOKED").equals(rent.getStatus()))
+                .filter(rent -> RentStatus.BOOKED.equals(rent.getStatus()))
                 .filter(rent -> rent.getToBePaid() == null)
                 .filter(rent -> ChronoUnit.DAYS.between(LocalDate.now(), rent.getStartDay()) < 3)
                 .forEach(rent -> rentService.accountFor(rent));

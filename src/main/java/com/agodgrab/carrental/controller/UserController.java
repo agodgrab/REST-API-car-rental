@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/user/")
 public class UserController {
 
-    /* --->>> TO DO AS A NEXT STEP OF DEVELOPMENT<<<<----
+    //TODO
 
+    /*
     @Autowired
     UserService userService;
 
@@ -51,6 +52,4 @@ public class UserController {
     }
 
 */
-
-
 }

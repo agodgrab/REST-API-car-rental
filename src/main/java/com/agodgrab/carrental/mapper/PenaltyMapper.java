@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PenaltyMapper {
+public class PenaltyMapper implements Mapper<PenaltyDto, Penalty> {
 
     @Autowired
     RentMapper rentMapper;
@@ -15,7 +15,8 @@ public class PenaltyMapper {
     @Autowired
     RentService rentService;
 
-    public PenaltyDto mapToPenaltyDto(Penalty penalty) {
+    @Override
+    public PenaltyDto mapToDto(Penalty penalty) {
         return new PenaltyDto.PenaltyDtoBuilder()
                 .id(penalty.getId())
                 .reason(penalty.getReason())
@@ -25,7 +26,8 @@ public class PenaltyMapper {
                 .build();
     }
 
-    public Penalty mapToPenalty(PenaltyDto penaltyDto) {
+    @Override
+    public Penalty mapToEntity(PenaltyDto penaltyDto) {
         return new Penalty(penaltyDto.getId(),
                 penaltyDto.getReason(),
                 penaltyDto.getDetails(),

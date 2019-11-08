@@ -1,7 +1,7 @@
 package com.agodgrab.carrental.service;
 
-import com.agodgrab.carrental.repository.PenaltyRepository;
 import com.agodgrab.carrental.domain.Penalty;
+import com.agodgrab.carrental.repository.PenaltyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

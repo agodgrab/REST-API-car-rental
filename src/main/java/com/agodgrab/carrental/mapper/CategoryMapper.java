@@ -6,26 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CategoryMapper {
+public class CategoryMapper implements Mapper<CategoryDto, Category> {
 
     @Autowired
     CarMapper carMapper;
 
-    public Category mapToCategory(CategoryDto categoryDto) {
-        return new Category(categoryDto.getId(),
-                categoryDto.getName(),
-                categoryDto.getDetails(),
-                categoryDto.getPricePerDay(),
-                carMapper.mapToCarList(categoryDto.getListOfCarsDto()));
-    }
-
-    public CategoryDto mapToCategoryDto(Category category) {
+    @Override
+    public CategoryDto mapToDto(Category category) {
         return new CategoryDto.CategoryDtoBuilder()
                 .id(category.getId())
                 .name(category.getName())
                 .details(category.getDetails())
                 .pricePerDay(category.getPricePerDay())
-                .listOfCarsDto(carMapper.mapToCarDtoList(category.getListOfCars()))
+                .listOfCarsDto(carMapper.mapToDtoList(category.getListOfCars()))
                 .build();
+    }
+
+    @Override
+    public Category mapToEntity(CategoryDto categoryDto) {
+        return new Category(categoryDto.getId(),
+                categoryDto.getName(),
+                categoryDto.getDetails(),
+                categoryDto.getPricePerDay(),
+                carMapper.mapToEntitiesList(categoryDto.getListOfCarsDto()));
     }
 }

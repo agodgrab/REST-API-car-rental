@@ -1,8 +1,8 @@
 package com.agodgrab.carrental.googlecalendar.service;
 
-import com.google.api.services.calendar.model.Event;
 import com.agodgrab.carrental.domain.Rent;
 import com.agodgrab.carrental.googlecalendar.client.CalendarClient;
+import com.google.api.services.calendar.model.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

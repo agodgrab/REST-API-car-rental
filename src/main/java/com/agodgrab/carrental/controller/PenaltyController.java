@@ -21,7 +21,7 @@ public class PenaltyController {
 
     @PostMapping(value = "/penalty", consumes = APPLICATION_JSON_VALUE)
     public void declarePenalty(@RequestBody PenaltyDto penaltyDto) {
-        penaltyService.chargePenalty(penaltyMapper.mapToPenalty(penaltyDto));
+        penaltyService.chargePenalty(penaltyMapper.mapToEntity(penaltyDto));
     }
 
     @DeleteMapping(value = "/penalty/{id}")

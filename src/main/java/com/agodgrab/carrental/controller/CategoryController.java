@@ -27,12 +27,12 @@ public class CategoryController {
 
     @PostMapping(value = "/category")
     public CategoryDto addNewCategory(@RequestBody CategoryDto categoryDto) {
-        return categoryMapper.mapToCategoryDto(categoryService.addCategory(categoryMapper.mapToCategory(categoryDto)));
+        return categoryMapper.mapToDto(categoryService.addCategory(categoryMapper.mapToEntity(categoryDto)));
     }
 
     @PutMapping(value = "/category")
     public CategoryDto updateCategory(@RequestBody CategoryDto categoryDto) {
-        return categoryMapper.mapToCategoryDto(categoryService.updateCategory(categoryMapper.mapToCategory(categoryDto)));
+        return categoryMapper.mapToDto(categoryService.updateCategory(categoryMapper.mapToEntity(categoryDto)));
     }
 
     @DeleteMapping(value = "/category")

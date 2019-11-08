@@ -1,13 +1,13 @@
 package com.agodgrab.carrental.service;
 
-import com.agodgrab.carrental.repository.LogHistoryRepository;
 import com.agodgrab.carrental.domain.LogHistory;
 import com.agodgrab.carrental.domain.User;
+import com.agodgrab.carrental.repository.LogHistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
-import java.util.Calendar;
+import java.time.Instant;
 
 @Service
 public class LogHistoryService {
@@ -19,7 +19,7 @@ public class LogHistoryService {
         LogHistory logHistory = new LogHistory();
         logHistory.setUser(user);
 
-        Timestamp currentTimestamp = new Timestamp(Calendar.getInstance().getTime().getTime());
+        Timestamp currentTimestamp = Timestamp.from(Instant.now());
         logHistory.setTimeStamp(currentTimestamp);
         logHistory.setLogMessage(message);
 

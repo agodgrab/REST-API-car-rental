@@ -1,11 +1,11 @@
 package com.agodgrab.carrental.dto;
 
-import com.agodgrab.carrental.domain.Penalty;
 import com.agodgrab.carrental.domain.enums.RentStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class RentDto {
@@ -18,7 +18,7 @@ public class RentDto {
     private long fuelLevel;
     private boolean withInsurance;
     private boolean withExtraCarTrunk;
-    private List<Penalty> listOfPenalties = new ArrayList<>();
+    private List<PenaltyDto> listOfPenalties = new ArrayList<>();
     private BigDecimal toBePaid;
     private RentStatus status;
 
@@ -31,7 +31,7 @@ public class RentDto {
         private long fuelLevel;
         private boolean withInsurance;
         private boolean withExtraCarTrunk;
-        private List<Penalty> listOfPenalties = new ArrayList<>();
+        private List<PenaltyDto> listOfPenalties = new ArrayList<>();
         private BigDecimal toBePaid;
         private RentStatus status;
 
@@ -75,12 +75,12 @@ public class RentDto {
             return this;
         }
 
-        public RentDtoBuilder penalty(Penalty penalty) {
+        public RentDtoBuilder penalty(PenaltyDto penalty) {
             this.listOfPenalties.add(penalty);
             return this;
         }
 
-        public RentDtoBuilder penalties(List<Penalty> listOfPenalties) {
+        public RentDtoBuilder penalties(List<PenaltyDto> listOfPenalties) {
             this.listOfPenalties = listOfPenalties;
             return this;
         }
@@ -101,8 +101,7 @@ public class RentDto {
 
     }
 
-
-    private RentDto(long id, long userId, long carRentedId, LocalDate startDay, LocalDate endDay, long fuelLevel, boolean withInsurance, boolean withExtraCarTrunk, List<Penalty> listOfPenalties, BigDecimal toBePaid, RentStatus status) {
+    private RentDto(long id, long userId, long carRentedId, LocalDate startDay, LocalDate endDay, long fuelLevel, boolean withInsurance, boolean withExtraCarTrunk, List<PenaltyDto> listOfPenalties, BigDecimal toBePaid, RentStatus status) {
         this.id = id;
         this.userId = userId;
         this.carRentedId = carRentedId;
@@ -151,8 +150,8 @@ public class RentDto {
         return withExtraCarTrunk;
     }
 
-    public List<Penalty> getListOfPenalties() {
-        return listOfPenalties;
+    public List<PenaltyDto> getListOfPenalties() {
+        return Collections.unmodifiableList(listOfPenalties);
     }
 
     public BigDecimal getToBePaid() {
