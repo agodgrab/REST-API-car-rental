@@ -19,7 +19,9 @@ public class ReceivableScheduler {
     @Autowired
     RentService rentService;
 
-    @Scheduled(cron = "0 0 6 * * *")
+    private static final String SIX_O_CLOCK_OF_EVERY_DAY = "0 0 6 * * *";
+
+    @Scheduled(cron = SIX_O_CLOCK_OF_EVERY_DAY)
     public void accountReceivables() {
         rentRepository.findAll().stream()
                 .filter(rent -> RentStatus.BOOKED.equals(rent.getStatus()))
