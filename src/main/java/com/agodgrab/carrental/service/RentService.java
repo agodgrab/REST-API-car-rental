@@ -4,6 +4,7 @@ import com.agodgrab.carrental.domain.Penalty;
 import com.agodgrab.carrental.domain.Rent;
 import com.agodgrab.carrental.domain.User;
 import com.agodgrab.carrental.domain.enums.RentStatus;
+import com.agodgrab.carrental.domain.enums.UserRole;
 import com.agodgrab.carrental.repository.RentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -67,7 +68,7 @@ public class RentService {
 
     public List<Rent> fetchUserRents(User user) {
 
-        if ("ADMIN".equals(user.getRole())) {
+        if (UserRole.ADMIN.equals(user.getRole())) {
             return rentRepository.findAll();
         } else {
             return rentRepository.getRentsByUserId(user.getId());
