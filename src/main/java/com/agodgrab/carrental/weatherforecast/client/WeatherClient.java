@@ -27,8 +27,7 @@ public class WeatherClient {
 
     public CurrentWeatherDto currentWeather(String cityName, String countryCode) {
         try {
-            CurrentWeatherDto result = restTemplate.getForObject(getUrl(cityName, countryCode, weatherConfig.CURR_ENDPOINT), CurrentWeatherDto.class);
-            return result;
+            return restTemplate.getForObject(getUrl(cityName, countryCode, weatherConfig.CURR_ENDPOINT), CurrentWeatherDto.class);
         } catch (RestClientException e) {
             LOGGER.error(e.getMessage(), e);
             return new CurrentWeatherDto();
@@ -42,7 +41,7 @@ public class WeatherClient {
 
     private URI getUrl(String cityName, String countryCode, String endpoint) {
 
-        URI url = UriComponentsBuilder.fromHttpUrl(weatherConfig.getWeatherAppEndpoint() + endpoint)
+        return UriComponentsBuilder.fromHttpUrl(weatherConfig.getWeatherAppEndpoint() + endpoint)
                 .queryParam("q", cityName, countryCode)
                 .queryParam("units", "metric")
                 .queryParam("lang", "pl")
@@ -50,7 +49,5 @@ public class WeatherClient {
                 .build()
                 .encode()
                 .toUri();
-
-        return url;
     }
 }
